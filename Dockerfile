@@ -1,6 +1,15 @@
 #Base Image :- Apache Tomcat10.1 with Java 21
 FROM tomcat:10.1-jdk21-temurin
 
+#Install required commands 
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    iproute2 \
+    net-tools \
+    iputils-ping \
+    curl \
+    rm -rf /var/lib/apt/lists/*
+
 #Set working directory
 WORKDIR /opt/myapp
 

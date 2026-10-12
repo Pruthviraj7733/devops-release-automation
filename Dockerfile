@@ -14,7 +14,7 @@ COPY app/index.jsp .
 # c = Create archive
 # v = Verbose (display detailed output)
 # f = File (specify output archive filename)
-RUN java -cvf java-application.war index.jsp
+RUN jar -cvf java-application.war index.jsp
 
 #Deploy WAR File to apache tomcat
 RUN mv java-application.war /usr/local/tomcat/webapps/

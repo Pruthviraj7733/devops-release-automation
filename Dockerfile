@@ -3,12 +3,10 @@ FROM tomcat:10.1-jdk21-temurin
 
 #Install required commands 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    iproute2 \
+    apt-get install -y iproute2 \
     net-tools \
     iputils-ping \
-    curl \
-    rm -rf /var/lib/apt/lists/*
+    curl 
 
 #Set working directory
 WORKDIR /opt/myapp

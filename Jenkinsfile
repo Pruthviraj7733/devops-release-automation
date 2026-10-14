@@ -551,7 +551,7 @@ pipeline {
             echo "Pipeline successful: ${env.IMAGE_URL}"
         }
 
-        always {
+        cleanup {
             sh '''
                 rm -f .kubeconfig
                 rm -f .active-before-release

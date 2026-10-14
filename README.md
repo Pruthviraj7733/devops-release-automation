@@ -4,6 +4,8 @@
 
 ### Jenkins CI/CD | Docker | Amazon ECR | Kubernetes | AWS ALB | Blue/Green | Rolling Updates
 
+**Production-inspired release engineering portfolio project**
+
 [![AWS](https://img.shields.io/badge/AWS-EKS%20%7C%20ECR%20%7C%20ALB-232F3E?style=for-the-badge&logo=amazonaws)](https://aws.amazon.com/)
 ![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Deployments-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
@@ -24,6 +26,10 @@ This repository demonstrates a CI/CD workflow built with GitHub, Jenkins, Docker
 **Lab status:** The EKS cluster and ALB were deleted after testing to prevent ongoing AWS charges. The documentation describes the completed lab, not a currently live deployment.
 
 ## Architecture
+
+<div align="center">
+  <img src="docs/assets/pipeline-architecture.svg" alt="3D-style DevOps CI/CD architecture diagram" width="100%" />
+</div>
 
 ```mermaid
 flowchart LR

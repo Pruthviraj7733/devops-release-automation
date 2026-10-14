@@ -1,4 +1,17 @@
+<div align="center">
+
 # Jenkins CI/CD Pipeline
+
+**Build • Publish • Deploy • Verify**
+
+<img src="assets/ci-cd-pipeline-workflow.svg" alt="Jenkins CI/CD Pipeline — responsive 3D-inspired workflow diagram" width="100%" />
+
+[Project Home](../README.md) · [Architecture](architecture.md) · [CI/CD Pipeline](ci-cd-pipeline.md) · [Blue/Green](blue-green-deployment.md) · [Troubleshooting](troubleshooting.md)
+
+</div>
+
+---
+
 
 The root [Jenkinsfile](../Jenkinsfile) is the authoritative implementation. It exposes three `DEPLOYMENT_STRATEGY` choices: `CI_ONLY`, `ROLLING_UPDATE`, and `BLUE_GREEN`.
 

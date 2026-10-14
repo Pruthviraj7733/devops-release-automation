@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: java-app-blue
+  namespace: devops-production
+  labels:
+    app: java-app
+    version: blue
+
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  minReadySeconds: 10
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+
+  selector:
+    matchLabels:
+      app: java-app
+      version: blue
+
+  template:
+    metadata:
+      labels:
+        app: java-app
+        version: blue
+
+    spec:
+      containers:
+        - name: java-app
+          image: 734836384716.dkr.ecr.ap-south-1.amazonaws.com/java-application:2
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 8080
+
+          readinessProbe:
+            httpGet:
+              path: /java-application/
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 10
+
+          livenessProbe:
+            httpGet:
+              path: /java-application/
+              port: 8080
+            initialDelaySeconds: 40
+            periodSeconds: 20
+
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

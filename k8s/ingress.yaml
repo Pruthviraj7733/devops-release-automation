@@ -1,0 +1,46 @@
+# ============================================================
+# FILE: ingress.yaml
+# PURPOSE: Expose the Java application to internet users
+#          through AWS Application Load Balancer (ALB).
+#
+# TRAFFIC FLOW:
+# Internet -> AWS ALB -> Active Blue/Green Pod IPs
+#
+# HOW IT WORKS:
+# - AWS Load Balancer Controller manages the ALB.
+# - Ingress defines HTTP path-based routing.
+# - Active Service selects Blue or Green Pods.
+# - ALB registers selected Pod IPs directly as targets.
+#
+# IMPORTANT:
+# - Requires AWS Load Balancer Controller in EKS.
+# - Uses an internet-facing ALB.
+# - Uses HTTP for initial lab testing.
+# ============================================================
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: java-app-ingress
+  namespace: devops-production
+
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/healthcheck-path: /java-application/
+    alb.ingress.kubernetes.io/success-codes: "200"
+
+spec:
+  ingressClassName: alb
+
+  rules:
+    - http:
+        paths:
+          - path: /java-application/
+            pathType: Prefix
+            backend:
+              service:
+                name: java-app-active-service
+                port:
+                  number: 80

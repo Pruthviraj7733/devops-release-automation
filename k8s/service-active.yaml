@@ -1,0 +1,40 @@
+# ============================================================
+# FILE: service-active.yaml
+# PURPOSE: Controls production traffic during Blue/Green deployments.
+#
+# HOW IT WORKS:
+# - version: blue  -> Routes traffic to Blue Pods.
+# - version: green -> Routes traffic to Green Pods.
+#
+# DEPLOYMENT:
+# - Initially, Blue is active and Green is on standby.
+# - After Green is deployed and healthy, switch to Green.
+# - For rollback, switch back to Blue (if still healthy).
+#
+# IMPORTANT:
+# This Service is the stable endpoint used by our Ingress.
+# Only the selector changes; the Service name remains the same.
+# ============================================================
+
+
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: java-app-active-service
+  namespace: devops-production
+
+spec:
+  type: ClusterIP
+
+  selector:
+    app: java-app
+    version: blue
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+
+

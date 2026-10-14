@@ -1,4 +1,17 @@
-# Setup and Deployment Guide
+<div align="center">
+
+# Setup & Deployment Guide
+
+**Prerequisites • Local Build • Kubernetes Deployment**
+
+<img src="assets/setup-guide-workflow.svg" alt="Setup & Deployment Guide — responsive 3D-inspired workflow diagram" width="100%" />
+
+[Project Home](../README.md) · [Architecture](architecture.md) · [CI/CD Pipeline](ci-cd-pipeline.md) · [Blue/Green](blue-green-deployment.md) · [Troubleshooting](troubleshooting.md)
+
+</div>
+
+---
+
 
 > **Cost warning:** These commands create billable AWS resources. The original EKS cluster and ALB have already been deleted. Do not execute provisioning commands just to read the documentation.
 

@@ -1,4 +1,17 @@
+<div align="center">
+
 # Rolling Update
+
+**Controlled Deployment • Readiness • Availability**
+
+<img src="assets/rolling-update-workflow.svg" alt="Rolling Update — responsive 3D-inspired workflow diagram" width="100%" />
+
+[Project Home](../README.md) · [Architecture](architecture.md) · [CI/CD Pipeline](ci-cd-pipeline.md) · [Blue/Green](blue-green-deployment.md) · [Troubleshooting](troubleshooting.md)
+
+</div>
+
+---
+
 
 The pipeline's `ROLLING_UPDATE` mode identifies the currently active environment from the selector of `java-app-active-service`. It then updates the container image on the corresponding Deployment and waits for rollout completion.
 

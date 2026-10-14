@@ -1,4 +1,17 @@
-# Rollback and Recovery
+<div align="center">
+
+# Rollback & Recovery
+
+**Failure Handling • Traffic Restoration • Validation**
+
+<img src="assets/rollback-workflow.svg" alt="Rollback & Recovery — responsive 3D-inspired workflow diagram" width="100%" />
+
+[Project Home](../README.md) · [Architecture](architecture.md) · [CI/CD Pipeline](ci-cd-pipeline.md) · [Blue/Green](blue-green-deployment.md) · [Troubleshooting](troubleshooting.md)
+
+</div>
+
+---
+
 
 The Jenkinsfile contains failure handlers for both deployment strategies.
 

@@ -1,4 +1,17 @@
+<div align="center">
+
 # Blue/Green Deployment
+
+**Zero-Downtime Release Pattern • Manual Promotion**
+
+<img src="assets/blue-green-deployment-workflow.svg" alt="Blue/Green Deployment — responsive 3D-inspired workflow diagram" width="100%" />
+
+[Project Home](../README.md) · [Architecture](architecture.md) · [CI/CD Pipeline](ci-cd-pipeline.md) · [Blue/Green](blue-green-deployment.md) · [Troubleshooting](troubleshooting.md)
+
+</div>
+
+---
+
 
 The application has two Deployments, `java-app-blue` and `java-app-green`. The stable `java-app-active-service` selects one environment using the Pod label `version`.
 

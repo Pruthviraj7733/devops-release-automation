@@ -1,4 +1,17 @@
+<div align="center">
+
 # Troubleshooting Runbook
+
+**Diagnosis • Logs • Deployment Verification**
+
+<img src="assets/troubleshooting-workflow.svg" alt="Troubleshooting Runbook — responsive 3D-inspired workflow diagram" width="100%" />
+
+[Project Home](../README.md) · [Architecture](architecture.md) · [CI/CD Pipeline](ci-cd-pipeline.md) · [Blue/Green](blue-green-deployment.md) · [Troubleshooting](troubleshooting.md)
+
+</div>
+
+---
+
 
 Commands below require the relevant AWS resources to exist. The original lab cluster and ALB have been deleted.
 

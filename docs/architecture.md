@@ -1,4 +1,17 @@
+<div align="center">
+
 # Architecture
+
+**System Design • CI/CD • AWS EKS**
+
+<img src="assets/architecture-workflow.svg" alt="Architecture — responsive 3D-inspired workflow diagram" width="100%" />
+
+[Project Home](../README.md) · [Architecture](architecture.md) · [CI/CD Pipeline](ci-cd-pipeline.md) · [Blue/Green](blue-green-deployment.md) · [Troubleshooting](troubleshooting.md)
+
+</div>
+
+---
+
 
 This repository contains a Java JSP web application packaged into a Tomcat container and deployed through Jenkins to Amazon EKS.
 

@@ -13,7 +13,7 @@
 
 **A hands-on release automation project for a Java JSP web application, with multiple deployment strategies, health verification, and rollback handling.**
 
-[Architecture](docs/architecture.md) · [Setup Guide](docs/setup-guide.md) · [Pipeline](docs/ci-cd-pipeline.md) · [Troubleshooting](docs/troubleshooting.md)
+[Architecture](docs/architecture.md) · [Setup Guide](docs/setup-guide.md) · [Pipeline](docs/ci-cd-pipeline.md) · [Kubernetes Study Notes](notes/kubernetes/README.md) · [Troubleshooting](docs/troubleshooting.md)
 
 </div>
 
@@ -75,6 +75,19 @@ devops-release-automation/
     ├── rollback.md
     ├── troubleshooting.md
     └── aws-cleanup.md
+└── notes/
+    └── kubernetes/
+        ├── README.md
+        ├── 01-kubernetes-architecture.md
+        ├── 02-control-plane.md
+        ├── 03-worker-node.md
+        ├── 04-pods-and-deployments.md
+        ├── 05-services-and-networking.md
+        ├── 06-configmaps-and-secrets.md
+        ├── 07-storage-pv-pvc.md
+        ├── 08-scheduling-and-scaling.md
+        ├── 09-security-and-rbac.md
+        └── 10-troubleshooting.md
 ```
 
 ## Key Features
@@ -134,6 +147,19 @@ Open `http://localhost:9090/java-application/` while the container is running. D
 | [Rollback](docs/rollback.md) | Failure recovery and limitations |
 | [Troubleshooting](docs/troubleshooting.md) | Kubernetes, Jenkins, and ALB checks |
 | [AWS Cleanup](docs/aws-cleanup.md) | Cost controls and read-only verification commands |
+
+## Kubernetes Learning Notes
+
+Alongside the completed release automation lab, this repository includes a **10-chapter Kubernetes study guide** for theory, command-line practice, architecture revision and DevOps interviews. These notes are educational; their examples are not all implemented or tested in this CI/CD project.
+
+| Learning track | Chapters |
+|---|---|
+| Architecture and cluster components | [01 Architecture](notes/kubernetes/01-kubernetes-architecture.md) · [02 Control Plane](notes/kubernetes/02-control-plane.md) · [03 Worker Nodes](notes/kubernetes/03-worker-node.md) |
+| Workloads and networking | [04 Pods and Deployments](notes/kubernetes/04-pods-and-deployments.md) · [05 Services and Ingress](notes/kubernetes/05-services-and-networking.md) |
+| Configuration and persistence | [06 ConfigMaps and Secrets](notes/kubernetes/06-configmaps-and-secrets.md) · [07 PV, PVC and Storage](notes/kubernetes/07-storage-pv-pvc.md) |
+| Operations and security | [08 Scheduling and Scaling](notes/kubernetes/08-scheduling-and-scaling.md) · [09 Security and RBAC](notes/kubernetes/09-security-and-rbac.md) · [10 Troubleshooting](notes/kubernetes/10-troubleshooting.md) |
+
+**[Open the complete Kubernetes Notes Index →](notes/kubernetes/README.md)**
 
 ## Security and Cost Notes
 
